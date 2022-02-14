@@ -4,6 +4,7 @@ import st from "./DetailPage.module.css";
 
 const DetailPage = ({ DB }) => {
 	const { params } = useParams();
+	console.log(params);
 	const data = DB[params];
 	return (
 		<div>
