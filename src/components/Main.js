@@ -3,7 +3,7 @@ import styles from "./Main.module.css";
 const Main = () => {
 	return (
 		<div className={styles.main}>
-			<h3 className={styles.title}>20% Off</h3>
+			<h3 className={styles.title}>20% Season Off</h3>
 			<p>
 				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed totam
 				rerum delectus magnam aliquid harum doloribus corporis laborum optio,

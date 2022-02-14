@@ -1,13 +1,14 @@
 import styles from "./Navbar.module.css";
 import logo from "../images/apple.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light bg-light">
+		<nav className="navbar navbar-expand-md navbar-light bg-light">
 			<div className="container-fluid">
-				<a className="navbar-brand" href="#">
+				<Link to="/" className="navbar-brand">
 					<img src={logo} alt="" width="30" height="30" />
-				</a>
+				</Link>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -22,9 +23,9 @@ const Navbar = () => {
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 						<li className="nav-item">
-							<a className="nav-link active" aria-current="page" href="#">
+							<Link to="/" className="nav-link active" aria-current="page">
 								Shoes Shop
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
 							<a className="nav-link" href="#">

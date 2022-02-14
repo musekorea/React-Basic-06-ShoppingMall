@@ -1,0 +1,21 @@
+.product {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+.product img {
+	width: 100px;
+}
+
+.product .content {
+	color: gray;
+}
+.product .price {
+	font-weight: bold;
+	font-size: 20px;
+}

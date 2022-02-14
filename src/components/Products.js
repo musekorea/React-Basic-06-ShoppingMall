@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import st from "./Products.module.css";
-import fakeDB from "../db/fakeDB";
 
 const Product = ({ data }) => {
 	return (
@@ -13,12 +12,11 @@ const Product = ({ data }) => {
 	);
 };
 
-const Products = () => {
-	const [products, setProducts] = useState(fakeDB);
+const Products = ({ DB }) => {
 	return (
 		<div className="container">
 			<div className="row">
-				{products.map((data) => (
+				{DB.map((data) => (
 					<Product data={data} key={data.id}></Product>
 				))}
 			</div>
