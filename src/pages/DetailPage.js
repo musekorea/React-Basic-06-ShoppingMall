@@ -1,19 +1,20 @@
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
-import st from "./DetailPage.module.css";
+import Notice from "../components/Notice";
+import "./DetailPage.scss";
 
 const DetailPage = ({ DB }) => {
 	const { params } = useParams();
-	console.log(params);
 	const data = DB[params];
 	return (
-		<div>
+		<div className="detail">
 			<Navbar></Navbar>
-			<div className={st.product}>
+			<Notice></Notice>
+			<div className="product">
 				<img src={data.image} alt="" />
 				<h3>{data.title}</h3>
-				<p className={st.content}>{data.content}</p>
-				<p className={st.price}>{data.price}</p>
+				<p className="content">{data.content}</p>
+				<p className="price">{data.price}</p>
 				<button className="btn btn-danger">주문하기</button>
 			</div>
 		</div>
