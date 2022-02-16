@@ -9,7 +9,7 @@ const DetailPage = ({ DB }) => {
 	return (
 		<div className="detail">
 			<Navbar></Navbar>
-			<Notice></Notice>
+			<Notice>Almost out of stock ~ Order Now !!</Notice>
 			<div className="product">
 				<img src={data.image} alt="" />
 				<h3>{data.title}</h3>

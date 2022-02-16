@@ -1,4 +1,4 @@
-import styles from "./Navbar.module.css";
+import "./Navbar.scss";
 import logo from "../images/apple.png";
 import { Link } from "react-router-dom";
 

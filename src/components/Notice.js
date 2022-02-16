@@ -1,9 +1,9 @@
 import "./Notice.scss";
 
-const Notice = () => {
+const Notice = ({ children }) => {
 	return (
 		<div className="notice">
-			<h4 className="content">Almost out of stock! Order now ❗</h4>
+			<h4 className="text">{children}</h4>
 		</div>
 	);
 };

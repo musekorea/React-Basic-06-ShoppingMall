@@ -3,7 +3,7 @@ $notice-bg1: #eeeeee;
 $notice-fg1: tomato;
 $notice-fsz: 20px;
 
-@mixin content() {
+@mixin text() {
 	text-align: center;
 	background-color: $notice-bg1;
 	padding: 10px;
@@ -18,15 +18,15 @@ $notice-fsz: 20px;
 	margin: 10px 0;
 	display: flex;
 	justify-content: center;
-	.content {
-		@include content();
+	.text {
+		@include text();
 	}
-	.content-red {
-		@extend .content;
+	.text-red {
+		@extend .text;
 		background-color: red;
 	}
-	.content-blue {
-		@extend .content;
+	.text-blue {
+		@extend .text;
 		background-color: blue;
 	}
 }
