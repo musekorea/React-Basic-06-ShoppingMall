@@ -5,14 +5,14 @@ import "./Products.scss";
 
 const Product = ({ data }) => {
 	return (
-		<Link to={`/detail/${data.id}`}>
-			<div className="col-md product">
+		<div className="col-md product">
+			<Link to={`/detail/${data.id}`}>
 				<img src={data.image} alt="" style={{ width: "100px" }} />
 				<h3>{data.title}</h3>
 				<p className="content">{data.content}</p>
 				<p className="price">{data.price}</p>
-			</div>
-		</Link>
+			</Link>
+		</div>
 	);
 };
 
@@ -20,7 +20,6 @@ const Products = ({ DB }) => {
 	const [alarm, setAlarm] = useState(true);
 	useEffect(() => {
 		setTimeout(() => {
-			console.log("몇번 실행되는가");
 			setAlarm((prev) => false);
 		}, 5000);
 	}, []);
@@ -31,8 +30,8 @@ const Products = ({ DB }) => {
 			) : null}
 
 			<div className="row">
-				{DB.map((data) => (
-					<Product data={data} key={data.id}></Product>
+				{DB.map((data, index) => (
+					<Product data={data} key={index}></Product>
 				))}
 			</div>
 		</div>

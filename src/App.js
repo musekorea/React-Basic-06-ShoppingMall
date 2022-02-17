@@ -6,15 +6,24 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DB from "./db/fakeDB";
 
 function App() {
-	const [products, setProducts] = useState(DB);
+	const [products, setProducts] = useState(() => DB);
+	const [stock, setStock] = useState(() => [10, 10, 10]);
+	const updateDB = (moreProducts) => {
+		setProducts((prev) => [...prev, ...moreProducts]);
+	};
 	return (
 		<div className="App">
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={<LandingPage DB={DB} />}></Route>
+					<Route
+						path="/"
+						element={
+							<LandingPage DB={products} updateDB={updateDB} stock={stock} />
+						}
+					></Route>
 					<Route
 						path="/detail/:params"
-						element={<DetailPage DB={DB} />}
+						element={<DetailPage DB={products} stock={stock} />}
 					></Route>
 				</Routes>
 			</BrowserRouter>

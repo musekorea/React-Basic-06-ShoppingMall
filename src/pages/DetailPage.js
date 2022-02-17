@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Notice from "../components/Notice";
 import "./DetailPage.scss";
 
-const DetailPage = ({ DB }) => {
+const DetailPage = ({ DB, moreProducts }) => {
 	const { params } = useParams();
 	const data = DB[params];
 	return (
