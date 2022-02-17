@@ -23,7 +23,9 @@ function App() {
 					></Route>
 					<Route
 						path="/detail/:params"
-						element={<DetailPage DB={products} stock={stock} />}
+						element={
+							<DetailPage DB={products} stock={stock} setStock={setStock} />
+						}
 					></Route>
 				</Routes>
 			</BrowserRouter>

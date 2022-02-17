@@ -4,7 +4,7 @@ import Products from "../components/Products";
 import "./LandingPage.scss";
 import { useState } from "react";
 
-const LandingPage = ({ DB, updateDB }) => {
+const LandingPage = ({ DB, updateDB, stock }) => {
 	const [loading, setLoading] = useState(false);
 	const handleMoreProducts = async (e) => {
 		setLoading((prev) => true);
@@ -26,7 +26,7 @@ const LandingPage = ({ DB, updateDB }) => {
 		<div className="landing-page">
 			<Navbar></Navbar>
 			<Main></Main>
-			<Products DB={DB}></Products>
+			<Products DB={DB} stock={stock}></Products>
 			{loading ? <h3>"Loading"</h3> : null}
 			<button className="btn btn-primary" onClick={handleMoreProducts}>
 				More Products

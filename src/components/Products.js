@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Notice from "./Notice";
 import "./Products.scss";
 
-const Product = ({ data }) => {
+const Product = ({ data, stock }) => {
 	return (
 		<div className="col-md product">
 			<Link to={`/detail/${data.id}`}>
@@ -11,12 +11,13 @@ const Product = ({ data }) => {
 				<h3>{data.title}</h3>
 				<p className="content">{data.content}</p>
 				<p className="price">{data.price}</p>
+				<p>stock {stock}</p>
 			</Link>
 		</div>
 	);
 };
 
-const Products = ({ DB }) => {
+const Products = ({ DB, stock }) => {
 	const [alarm, setAlarm] = useState(true);
 	useEffect(() => {
 		setTimeout(() => {
@@ -31,7 +32,7 @@ const Products = ({ DB }) => {
 
 			<div className="row">
 				{DB.map((data, index) => (
-					<Product data={data} key={index}></Product>
+					<Product data={data} stock={stock[index]} key={index}></Product>
 				))}
 			</div>
 		</div>
