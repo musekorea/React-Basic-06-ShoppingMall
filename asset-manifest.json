@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/React-Basic-06-ShoppingMall/static/css/main.8c2d39fa.css",
+    "main.js": "/React-Basic-06-ShoppingMall/static/js/main.907cb754.js",
+    "static/media/background.jpg": "/React-Basic-06-ShoppingMall/static/media/background.739617fec866998d6b35.jpg",
+    "static/media/shoes2.jpg": "/React-Basic-06-ShoppingMall/static/media/shoes2.acf4372152017d8dfd45.jpg",
+    "static/media/shoes3.jpg": "/React-Basic-06-ShoppingMall/static/media/shoes3.df497c7b8c04674d5218.jpg",
+    "static/media/shoes1.jpg": "/React-Basic-06-ShoppingMall/static/media/shoes1.e7b6da8d465ea481d3e0.jpg",
+    "static/media/apple.png": "/React-Basic-06-ShoppingMall/static/media/apple.5ff7db215fe57a11f9dd.png",
+    "index.html": "/React-Basic-06-ShoppingMall/index.html",
+    "main.8c2d39fa.css.map": "/React-Basic-06-ShoppingMall/static/css/main.8c2d39fa.css.map",
+    "main.907cb754.js.map": "/React-Basic-06-ShoppingMall/static/js/main.907cb754.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c2d39fa.css",
+    "static/js/main.907cb754.js"
+  ]
+}
